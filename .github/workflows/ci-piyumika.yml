@@ -18,9 +18,6 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Change directory to piyumika-react-project
-        run: cd piyumika-react-project
-
       - name: Install dependencies
         run: npm install
         working-directory: piyumika-react-project
