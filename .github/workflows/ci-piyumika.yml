@@ -11,19 +11,22 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: "20"
+
+      - name: Change directory to piyumika-react-project
+        run: cd piyumika-react-project
 
       - name: Install dependencies
         run: npm install
         working-directory: piyumika-react-project
 
       - name: Run tests
-        run: npm test
+        run: npm run test
         working-directory: piyumika-react-project
 
       - name: Build project
