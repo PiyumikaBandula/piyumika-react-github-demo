@@ -20,9 +20,12 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: piyumika-react-project
 
       - name: Run tests
         run: npm test
+        working-directory: piyumika-react-project
 
       - name: Build project
         run: npm run build
+        working-directory: piyumika-react-project
